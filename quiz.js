@@ -226,8 +226,8 @@ module.exports = class Quiz {
 	questionTest(id) {
 		return new Promise((resolve, reject) => {
 			this.rl.question(chalk.red(this.quizzes[id].question + "? "), (answer) => {
-				answer = answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-				let realAnswer = this.quizzes[id].answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+				answer = answer.toLowerCase();
+				let realAnswer = this.quizzes[id].answer.toLowerCase();
 				
 				resolve(answer == realAnswer);
 			});
