@@ -18,11 +18,11 @@ exports.big = function (text) {
 }
 
 exports.correct = function () {
-	return chalk.green(figlet.textSync("Correcta"));
+	return chalk.green(figlet.textSync("correct"));
 }
 
 exports.incorrect = function () {
-	return chalk.red(figlet.textSync("Incorrecta"));
+	return chalk.red(figlet.textSync("incorrect"));
 }
 
 exports.score = function (score) {
