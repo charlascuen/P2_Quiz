@@ -7,6 +7,10 @@ const rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout
 });
+rl.on('close', () => {
+  console.log('Adiós!');
+  process.exit(0);
+});
 
 let commands;
 
