@@ -181,12 +181,8 @@ module.exports = class Quiz {
 					this.questionTest(quizzes[id]).then((result) => {
 						if (result) {
 							score++;
-							console.log("correct");
-							console.log(log.correct());
 							console.log(`CORRECTO - Lleva ${score} aciertos`);
 						} else {
-							console.log("incorrect");
-							console.log(log.correct());
 							console.log(`INCORRECTO.`);
 							console.log(`Fin del juego. Aciertos: ${score}`);
 							console.log(log.score(score));
@@ -226,8 +222,8 @@ module.exports = class Quiz {
 	questionTest(id) {
 		return new Promise((resolve, reject) => {
 			this.rl.question(chalk.red(this.quizzes[id].question + "? "), (answer) => {
-				answer = answer.toLowerCase();
-				let realAnswer = this.quizzes[id].answer.toLowerCase();
+				answer = answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+				let realAnswer = this.quizzes[id].answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 				
 				resolve(answer == realAnswer);
 			});
