@@ -87,7 +87,7 @@ module.exports = class Quiz {
 		return new Promise((resolve, reject) => {
 			id = Number(id);
 			if (Number.isInteger(id) && this.quizzes[id]) {
-				console.log(log.quizItem(id, this.quizzes[id].question, his.quizzes[id].answer));
+				console.log(log.quizItem(id, this.quizzes[id].question, this.quizzes[id].answer));
 			} else {
 				console.log(log.error("El valor del parámetro id no es válido"));
 			}
