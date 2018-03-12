@@ -10,45 +10,45 @@ module.exports = class Quiz {
 		this.commands = [
 			{
 				name: "help",
-				description: "",
+				description: "Muestra la ayuda.",
 				alias: "h"
 			},
 			{
 				name: "list",
-				description: ""
+				description: "Listar los quizzes existentes."
 			},
 			{
 				name: "show",
-				description: ""
+				description: "Muestra la pregunta y la respuesta del quiz indicado."
 			},
 			{
 				name: "add",
-				description: ""
+				description: "Añadir un nuevo quiz interactivamente."
 			},
 			{
 				name: "delete",
-				description: ""
+				description: "Borrar el quiz indicado."
 			},
 			{
 				name: "edit",
-				description: ""
+				description: "Editar el quiz indicado."
 			},
 			{
 				name: "test",
-				description: ""
+				description: "Probar el quiz indicado."
 			},
 			{
 				name: "play",
-				description: "",
+				description: "Jugar con las preguntas aleatorias de todos los quizzes.",
 				alias: "p"
 			},
 			{
 				name: "credits",
-				description: ""
+				description: "Créditos"
 			},
 			{
 				name: "quit",
-				description: "",
+				description: "Salir del programa.",
 				alias: "q"
 			},
 		];
@@ -181,8 +181,10 @@ module.exports = class Quiz {
 					this.questionTest(quizzes[id]).then((result) => {
 						if (result) {
 							score++;
+							console.log(log.correct());
 							console.log(`CORRECTO - Lleva ${score} aciertos`);
 						} else {
+							console.log(log.correct());
 							console.log(`INCORRECTO.`);
 							console.log(`Fin del juego. Aciertos: ${score}`);
 							console.log(log.score(score));
