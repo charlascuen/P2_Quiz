@@ -184,7 +184,7 @@ module.exports = class Quiz {
 							console.log(`CORRECTO - Lleva ${score} aciertos`);
 						} else {
 							console.log(`INCORRECTO`);
-							console.log(`Fin del juego. Aciertos:${score}`);
+							console.log(`Fin del juego. Aciertos: ${score}`);
 							console.log(log.score(score));
 							return resolve();
 						}
@@ -193,7 +193,7 @@ module.exports = class Quiz {
 					});
 				} else {
 					console.log("No hay nada más que preguntar.");
-					console.log(`Fin del juego. Aciertos:${score}`);
+					console.log(`Fin del juego. Aciertos: ${score}`);
 					console.log(log.score(score));
 					resolve();
 				}
