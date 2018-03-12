@@ -47,7 +47,7 @@ function processInput(command) {
 			console.log(error);
 		});
 	} else {
-		console.log(chalk.yellow.bgRed.bold("El comando " + commandName + " no se ha encontrado, pruebe con \"list\""));
+		console.log(chalk.yellow.bgRed.bold("El comando " + commandName + " no se ha encontrado, pruebe con \"help\""));
 		rl.question(prompText, processInput);
 	}
 	
