@@ -181,9 +181,9 @@ module.exports = class Quiz {
 					this.questionTest(quizzes[id]).then((result) => {
 						if (result) {
 							score++;
-							console.log(`CORRECT - Lleva ${score} aciertos`);
+							console.log(`CORRECTO - Lleva ${score} aciertos`);
 						} else {
-							console.log(`INCORRECT`);
+							console.log(`INCORRECTO`);
 							console.log(`Fin del juego. Aciertos:${score}`);
 							console.log(log.score(score));
 							return resolve();
