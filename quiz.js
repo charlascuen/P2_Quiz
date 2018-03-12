@@ -192,6 +192,7 @@ module.exports = class Quiz {
 						ask();
 					});
 				} else {
+					console.log("No hay nada más que preguntar.");
 					console.log(`Fin del juego. Aciertos:${score}`);
 					console.log(log.score(score));
 					resolve();
